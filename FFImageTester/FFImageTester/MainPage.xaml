@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ff="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="FFImageTester.MainPage"
+             x:Name="Root">
+    <StackLayout>
+        <Label Text="FFImageTester" FontSize="Title" Padding="30,10,30,10"/>
+        <Label x:Name="statusLabel" Text="Status: " FontSize="Body"/>
+        <ff:SvgCachedImage x:Name="svgCachedImage"
+                           HorizontalOptions="Start"
+                           BackgroundColor="AliceBlue"
+                           DownsampleToViewSize="False"
+                           DownsampleUseDipUnits="False"
+                           HeightRequest="200"
+                           WidthRequest="200"
+                           Aspect="AspectFit"
+                           CacheType="Memory"
+                           RetryCount="3"
+                           Error="SvgCachedImage_Error"
+                           Finish="SvgCachedImage_Finish"
+                           Success="SvgCachedImage_Success"/>
+    </StackLayout>
+</ContentPage>
